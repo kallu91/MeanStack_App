@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-title>Create Post</mat-card-title>
+  <form (ngSubmit)="onClickPost(profileForm)" #profileForm="ngForm">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="Name"
+        ngModel
+        required
+        #name="ngModel"
+      />
+      <mat-error *ngIf="name.invalid"
+        >Please Enter name</mat-error
+      > </mat-form-field
+    ><br />
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="text"
+        name="Email"
+        ngModel
+        required
+        #email="ngModel"
+      />
+      <mat-error *ngIf="email.invalid"
+        >Please Enter Email</mat-error
+      ></mat-form-field
+    ><br />
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input
+        matInput
+        type="text"
+        name="PhoneNumber"
+        ngModel
+        required
+        #pho="ngModel"
+      /><mat-error *ngIf="pho.invalid"
+        >Please Enter PhoneNumber</mat-error
+      ></mat-form-field
+    ><br />
+
+    <button mat-raised-button color="primary" type="submit">Post</button>
+  </form>
+</mat-card>

@@ -1,0 +1,21 @@
+<mat-accordion multi="true" >
+  <mat-expansion-panel *ngFor="let i of posts">
+    <mat-expansion-panel-header>
+      {{i.Name}}
+    </mat-expansion-panel-header>
+    <!-- <p>
+      <strong>{{i.id}}</strong>
+    </p> -->
+    <p>
+      <strong>{{i.Email}}</strong>
+    </p>
+    <p>
+      <strong>{{i.PhoneNumber}}</strong>
+    </p>
+    <mat-action-row>
+      <button mat-button color="primary">Edit</button>
+      <button mat-button color="warn">Delete</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<!-- <p class="info-text mat-body1" *ngIf="posts.length<=0">No Posts to display</p> -->
